@@ -1,0 +1,18 @@
+
+<!-- site navigation -->
+{% assign nav-pages = site.html_pages | where: 'nav', 'true' | sort: 'nav-order' %}
+
+
+<div class="site-nav">
+  <ul class="site-nav__list">
+
+    <li class="site-nav__item">
+      <a class="site-nav__link" href="https://training.fibaro.com.au/login/">Login</a>
+    </li>
+
+    <li class="site-nav__item">
+      <a class="site-nav__link" href="https://training.fibaro.com.au/login/">Register</a>
+    </li>
+
+  </ul>
+</div>

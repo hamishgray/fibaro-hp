@@ -1,0 +1,61 @@
+---
+layout: default
+id: home
+nav: true
+nav-order: 1
+title: Home
+
+banner:
+  content: >
+    <h1 class="banner-title">
+      Welcome to the FIBARO ANZ<br />
+      <span class="title--blue">Trade Portal</span><br />
+      for authorised resellers
+    </h1>
+
+link-items:
+
+  - id: online-training
+    title: Online Training
+    subtitle:
+    link: http://www.training.fibaro.com.au/list
+
+  - id: support-portal
+    title: Support Portal
+    subtitle:
+    link: https://fibaroanz.freshdesk.com/support/home
+
+  - id: sales-resources
+    title: Sales Resources
+    subtitle: Coming Soon
+    link:
+
+  - id: certified-installer
+    title: Certified Installer
+    subtitle: Coming Soon
+    link:
+
+  - id: manuals
+    title: Manuals
+    subtitle:
+    link: http://manuals.fibaro.com/
+
+---
+
+
+
+<div class="container vpad--xxl">
+  <div class="row row--gutters-lg">
+    {% for item in page.link-items %}
+    <div class="col col--1-of-5">
+      <div class="hp-tile">
+        {% if item.link %}<a class="hp-tile__link" href="{{item.link}}"></a>{% endif %}
+        <div class="hp-tile__icon bg-img bg-img--1-1" style="background-image: url({{site.img}}/content/{{item.id}}.png);"></div>
+        <h4 class="title title--xxs text--medium">{{item.title}}</h4>
+        <span class="title title--xxs text--medium text--blue">{{item.subtitle}}</span>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+

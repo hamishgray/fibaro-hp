@@ -1,0 +1,57 @@
+// styles for the microsite nav
+
+$site-nav-height:    56px;
+$site-nav-height-sm: 44px;
+$nav-width-bp:       640px;
+$nav-color:          $grey-darkest;
+
+
+
+.site-header {
+  position: relative;
+  background-color: #ffffff;
+  &:after {
+    content: "";
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-image: url('../img/gradient.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: repeat;
+  }
+}
+
+
+
+.site-nav {
+  position: relative;
+  text-align: center;
+
+  &__list {
+    list-style: none;
+    float: right;
+  }
+  &__item {
+    list-style: none;
+    margin: 0;
+    float: left;
+    display: inline-block;
+  }
+  &__link {
+    display: block;
+    padding: $s-1 $s2;
+    font-family: $font;
+    font-weight: 300;
+    font-size: $s1;
+    text-transform: uppercase;
+    color: $grey-darkest;
+    transition: background-color $transition-time ease;
+    white-space: nowrap;
+    &.is-current      {}
+    .no-touch &:hover { color: $brand; }
+  }
+
+}

@@ -1,0 +1,31 @@
+// general styles for the project that wouldn't be a reuseable component
+
+.bg {
+  &--grey-light     { background-color: $grey-light; }
+  &--grey-lighter   { background-color: $grey-lighter; }
+  &--grey-lightest  { background-color: $grey-lightest; }
+  &--grey           { background-color: $grey; }
+  &--grey-dark      { background-color: $grey-dark; }
+  &--grey-darker    { background-color: $grey-darker; }
+  &--grey-darkest   { background-color: $grey-darkest; }
+}
+
+.hp-tile {
+  @include transition;
+  position: relative;
+  text-align: center;
+  transform: scale(1);
+  &__link {
+    position: absolute;
+    top:0;left:0;right:0;bottom:0;
+    z-index: 1;
+  }
+  &__icon {
+    margin: auto;
+    margin-bottom: $s2;
+    max-width: 140px;
+  }
+  &:hover {
+    transform: scale(1.05);
+  }
+}
